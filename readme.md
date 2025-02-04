@@ -1,0 +1,1 @@
+This is my take at doing the gophercises. I hope to learn a lot doing these, if you get help from my solutions then I'm glad
