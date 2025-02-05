@@ -1,16 +1,17 @@
 package main
 
 import (
+	"GoPhercises/quiz"
 	"flag"
-	"fmt"
 )
 
 func main() {
-	// quiz.ReadQuestions()
-
-	boolPtr := flag.Bool("boolean", true, "a boolean")
+	path := flag.String("csv", "", "path to csv file")
 
 	flag.Parse()
+	quizData := quiz.ReadQuestions(*path)
 
-	fmt.Printf("here is the bool flag: %v", *boolPtr)
+	// fmt.Println("here is the quizdata: ", quizData)
+
+	quiz.Play(quizData)
 }
